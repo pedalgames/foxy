@@ -47,7 +47,7 @@ class AssetFallback implements FallbackInterface
      */
     protected $originalContent;
 
-    public function __construct(IOInterface $io, Config $config, $path, Filesystem $fs = null)
+    public function __construct(IOInterface $io, Config $config, $path, ?Filesystem $fs = null)
     {
         $this->io = $io;
         $this->config = $config;

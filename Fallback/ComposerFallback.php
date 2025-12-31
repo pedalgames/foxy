@@ -80,8 +80,8 @@ class ComposerFallback implements FallbackInterface
         IOInterface $io,
         Config $config,
         InputInterface $input,
-        Filesystem $fs = null,
-        Installer $installer = null
+        ?Filesystem $fs = null,
+        ?Installer $installer = null
     ) {
         $this->composer = $composer;
         $this->io = $io;
