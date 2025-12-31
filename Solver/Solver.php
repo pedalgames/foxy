@@ -64,7 +64,7 @@ class Solver implements SolverInterface
         AssetManagerInterface $assetManager,
         Config $config,
         Filesystem $filesystem,
-        FallbackInterface $composerFallback = null
+        ?FallbackInterface $composerFallback = null
     ) {
         $this->config = $config;
         $this->fs = $filesystem;
