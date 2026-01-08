@@ -36,7 +36,9 @@ class ConsoleUtil
 
         if ($ref->hasProperty('input')) {
             $prop = $ref->getProperty('input');
-            $prop->setAccessible(true);
+            if (PHP_VERSION_ID < 80100) {
+                $prop->setAccessible(true);
+            }
             $input = $prop->getValue($io);
 
             if ($input instanceof InputInterface) {
